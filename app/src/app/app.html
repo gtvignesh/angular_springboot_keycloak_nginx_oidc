@@ -1,0 +1,8 @@
+<ng-container *ngIf="isLoggedIn; else loading">
+  <h2>Welcome {{ user.name}} - {{user.email }}</h2>
+  <button (click)="logout()">Logout</button>
+</ng-container>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
